@@ -1,18 +1,195 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="edu.orangecoastcollege.cs273.dtallcott.paintestimator.MainActivity">
+    tools:context="edu.orangecoastcollege.cs273.dtallcott.paintestimator.MainActivity"
+    android:background="@drawable/paintbackground">
+
 
     <TextView
+        android:id="@+id/paintEstimatorTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="23dp"
+        android:text="@string/app_name"
+        android:textSize="35dp"
+        />
 
-</android.support.constraint.ConstraintLayout>
+    <TextView
+        android:id="@+id/enterDimensionsTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/paintEstimatorTextView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="26dp"
+        android:textSize="20dp"
+        android:text="@string/enter_dimensions" />
+
+    <TextView
+        android:id="@+id/lengthTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/enterDimensionsTextView"
+        android:layout_alignStart="@+id/enterDimensionsTextView"
+        android:layout_below="@+id/enterDimensionsTextView"
+        android:layout_marginLeft="35dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="80dp"
+        android:text="@string/length"
+        android:textSize="20dp"/>
+
+    <TextView
+        android:id="@+id/widthTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/lengthTextView"
+        android:layout_alignRight="@+id/lengthTextView"
+        android:layout_below="@+id/lengthTextView"
+        android:layout_marginTop="32dp"
+        android:text="@string/width"
+        android:textSize="20dp"
+        android:layout_alignLeft="@+id/lengthTextView"
+        android:layout_alignStart="@+id/lengthTextView" />
+
+    <TextView
+        android:id="@+id/heightTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/widthTextView"
+        android:layout_alignStart="@+id/widthTextView"
+        android:layout_below="@+id/widthTextView"
+        android:layout_marginTop="32dp"
+        android:text="@string/height"
+        android:textSize="20dp"
+        />
+
+    <EditText
+        android:id="@+id/lengthEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/lengthTextView"
+        android:layout_marginLeft="126dp"
+        android:layout_marginStart="126dp"
+        android:layout_toEndOf="@+id/lengthTextView"
+        android:layout_toRightOf="@+id/lengthTextView"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:textSize="20dp"/>
+
+    <EditText
+        android:id="@+id/widthEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/widthTextView"
+        android:layout_alignLeft="@+id/lengthEditText"
+        android:layout_alignStart="@+id/lengthEditText"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:textSize="20dp"/>
+
+    <EditText
+        android:id="@+id/heightEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/heightTextView"
+        android:layout_alignLeft="@+id/widthEditText"
+        android:layout_alignStart="@+id/widthEditText"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:textSize="20dp"/>
+
+    <TextView
+        android:id="@+id/enterDoorWindowTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/heightEditText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="79dp"
+        android:text="@string/enter_door_window"
+        android:textSize="20dp"/>
+
+    <TextView
+        android:id="@+id/doorsTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/heightTextView"
+        android:layout_alignStart="@+id/heightTextView"
+        android:layout_below="@+id/enterDoorWindowTextView"
+        android:layout_marginTop="66dp"
+        android:text="@string/doors"
+        android:textSize="20dp"/>
+
+    <TextView
+        android:id="@+id/windowsTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:text="@string/windows"
+        android:textSize="20dp"
+        android:layout_below="@+id/doorsTextView"
+        android:layout_alignLeft="@+id/doorsTextView"
+        android:layout_alignStart="@+id/doorsTextView" />
+
+    <EditText
+        android:id="@+id/doorsEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/windowsTextView"
+        android:layout_alignLeft="@+id/heightEditText"
+        android:layout_alignStart="@+id/heightEditText"
+        android:ems="10"
+        android:inputType="number"
+        android:textSize="20dp"/>
+
+    <EditText
+        android:id="@+id/windowsEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/windowsTextView"
+        android:layout_alignLeft="@+id/doorsEditText"
+        android:layout_alignStart="@+id/doorsEditText"
+        android:ems="10"
+        android:inputType="number"
+        android:textSize="20dp"/>
+
+    <Button
+        android:id="@+id/computeButton"
+        android:onClick="computeGallons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/windowsTextView"
+        android:layout_marginTop="57dp"
+        android:text="@string/compute_button_text"
+        android:layout_toLeftOf="@+id/windowsEditText"
+        android:textSize="20dp"
+        android:layout_alignLeft="@+id/enterDimensionsTextView"
+        android:layout_alignStart="@+id/enterDimensionsTextView" />
+
+    <Button
+        android:id="@+id/helpButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/computeButton"
+        android:text="@string/help_button_text"
+        android:layout_alignRight="@+id/enterDimensionsTextView"
+        android:layout_alignEnd="@+id/enterDimensionsTextView"
+        android:layout_toRightOf="@+id/computeButton"
+        android:layout_toEndOf="@+id/computeButton"
+        android:textSize="20dp"
+        android:onClick= "gotoHelp"/>
+
+    <TextView
+        android:id="@+id/gallonsTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/computeButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="73dp"
+        android:textSize="20dp"
+        android:text="@string/gallons" />
+
+</RelativeLayout>
