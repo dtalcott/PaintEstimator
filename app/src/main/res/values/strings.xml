@@ -21,6 +21,7 @@
     <string name="interior_surface_area">Interior surface area:</string>
     <string name="gallons_needed">Gallons needed: </string>
     <string name="feet"> feet</string>
+    <string name="estimated">Estimated Paint Required: </string>
 
 
     <!-- HELP TEXT -->

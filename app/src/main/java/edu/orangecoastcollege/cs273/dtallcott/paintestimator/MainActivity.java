@@ -12,7 +12,7 @@ import java.text.DecimalFormat;
 
 public class MainActivity extends AppCompatActivity
 {
-    private static final DecimalFormat twoDP = new DecimalFormat("#.00");
+    public static final DecimalFormat twoDP = new DecimalFormat("#.00");
     //Member Variables for the Views
     private EditText mLengthEditText;
     private EditText mWidthEditText;
